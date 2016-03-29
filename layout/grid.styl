@@ -1,0 +1,11 @@
+.gd
+.grid
+  flex-grid-generate-row()
+
+  &__cell
+    flex-grid-generate-cols($grid)
+
+    for $name, $w in $bp
+      if $name isnt 'default'
+        +media-to($name)
+          flex-grid-generate-cols(merge( {}, $grid, { suffix: '\@' + $name } ))
