@@ -6,7 +6,10 @@ $flex-grid-defaults = {
 }
 
 
+//
 // Generate Flex Grid Row:
+//
+
 flex-grid-generate-row($grid = $flex-grid-defaults)
   display: flex
   flex-wrap: wrap
@@ -28,7 +31,10 @@ flex-grid-col-base($gap)
   min-height: 1px
 
 
+//
 // Generate Flex Grid Cell:
+//
+
 flex-grid-generate-cols($grid = $flex-grid-defaults)
   flex-grid-col-base($grid.gap)
   flex-helpers-item($grid.suffix)
@@ -41,7 +47,6 @@ flex-grid-generate-cols($grid = $flex-grid-defaults)
 
   for $i in (1..$grid.cols)
     $size = ($grid.base / $grid.cols * $i)
-    //$num-class = ($i is 1) ? '' : '-' + $i
 
     &--{ $i }{ $grid.suffix }
       flex-grid-col-base($grid.gap)
