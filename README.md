@@ -1,6 +1,8 @@
 # Stylus skeleton
 
-Must be used with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
+Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
+
+[Using BEMIT naming convention](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
 ## Structure
 - Main (with descriptions)
@@ -12,7 +14,7 @@ Must be used with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
         - resets
         - document
         - typografy
-    - Layout (`.l-`,`.o-` prefixes) 
+    - Layout (`.l-`,`.o-` prefixes)
         - Grid
         - Media
     - Components (`.c-` prefix)
