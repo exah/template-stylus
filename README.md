@@ -36,7 +36,7 @@ This will create `path/to/project/styles` directory inside yours project.
     - colors
     - general
     - grid
-    - typografy
+    - typography
 - Mixins
     - spacing
     - resets
@@ -45,7 +45,7 @@ This will create `path/to/project/styles` directory inside yours project.
 - Base (without prefixes)
     - defaults (and resets)
     - document
-    - typografy
+    - typography
 - Layout (`.l-`,`.o-` prefixes)
     - grid
     - media
@@ -57,7 +57,7 @@ This will create `path/to/project/styles` directory inside yours project.
     - margin
     - overflow
     - padding
-    - postion
+    - position
     - responsive
     - text
 
