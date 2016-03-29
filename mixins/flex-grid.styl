@@ -1,4 +1,4 @@
-$grid-defaults = {
+$flex-grid-defaults = {
   gap   : 1rem
   cols  : 12
   base  : 100%
@@ -7,7 +7,7 @@ $grid-defaults = {
 
 
 // Generate Flex Grid Row:
-flex-grid-generate-row($grid = $grid-defaults)
+flex-grid-generate-row($grid = $flex-grid-defaults)
   display: flex
   flex-wrap: wrap
 
@@ -29,7 +29,7 @@ flex-grid-col-base($gap)
 
 
 // Generate Flex Grid Cell:
-flex-grid-generate-cols($grid = $grid-defaults)
+flex-grid-generate-cols($grid = $flex-grid-defaults)
   flex-grid-col-base($grid.gap)
   flex-helpers-item($grid.suffix)
 
