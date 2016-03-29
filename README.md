@@ -1,5 +1,7 @@
 # Stylus skeleton
 
+Some useful staff, that I use in everyday stylus projects.
+
 Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
 
 [Using BEMIT naming convention](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
@@ -38,4 +40,4 @@ Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`
 - [x] Grid object (layout)
 - [x] Colors
 - [ ] Ratio box mixin
-- [ ] Position utils
+- [x] Position utils
