@@ -32,9 +32,9 @@ Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`
 
 ## TODO
 
-- [ ] Spacing & Grid settings
-- [ ] Grid mixin
-- [ ] Media object (layout)
-- [ ] Grid object (layout)
+- [x] Spacing & Grid settings
+- [x] Grid mixin
+- [x] Media object (layout)
+- [x] Grid object (layout)
 - [ ] Ratio box mixin
 - [ ] Position utils
