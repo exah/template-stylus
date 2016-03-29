@@ -1,12 +1,29 @@
 //
-// Settings & third-party dependencies
+// 1. Third-party dependencies
+// 2. Settings
+// 3. Mixins
+// 4. Base
+// 5. Layout
+// 6. Components
+// 7. Utils
+//
+
+//
+// 1. Third-party dependencies
+//
+
+// @import '~normalize.css/normalize.css'
+
+
+//
+// 2. Settings
 //
 
 @import 'settings'
 
 
 //
-// Functions & Mixins
+// 3. Mixins
 //
 
 @import 'functions/spacing'
@@ -14,7 +31,10 @@
 
 
 //
-// Base
+// 4. Base styles
+//
+//    document, defaults, typography, etc.
+//    Often without Prefixes / classes
 //
 
 @import 'base/defaults'
@@ -23,7 +43,29 @@
 
 
 //
-// Utils
+// 5. Layout
+//    @prefix .l-[class]
+//
+
+// +prefix-classes('l-')
+//  @import ...
+
+
+//
+// 6. Components (btn, nav, header, modal)
+//    @prefix .c-[name]
+//
+
+// +prefix-classes('c-')
+//  @import ...
+
+
+//
+// 7. Utils
+//    @prefix .u-[class]
+//
+//    Helper classes
+//    Like spacing (margin, padding), common hacks, responsive, text-styles
 //
 
 +prefix-classes('u-')
