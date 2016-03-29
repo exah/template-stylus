@@ -1,43 +1,75 @@
-# Stylus skeleton
+# Stylus template (for khaos)
 
-Some useful staff, that I use in everyday stylus projects.
+Some stylus staff, that I use in everyday stylus projects. Like grids, resets and utility classes.
 
-Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
+Doesn't have any depedencies and vendor prefixes. You need manualy install stylus, and setup it in your project.
+
+I recomend use it with following PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
+
+
+## Quick start
+
+Install khaos:
+
+```sh
+$ npm i -g khaos
+```
+
+Use template:
+
+```
+$ khaos create exah/template-stylus path/to/project/styles
+```
+
+This will create `path/to/project/styles` directory inside yours project.
+
+
+## Naming
 
 [Using BEMIT naming convention](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
 
+
 ## Structure
-- Main (with descriptions)
-    - Settings
-    - Functions (and mixins)
-        - Spacing
-        - Resets
-    - Base (without prefixes)
-        - resets
-        - document
-        - typografy
-    - Layout (`.l-`,`.o-` prefixes)
-        - Grid
-        - Media
-    - Components (`.c-` prefix)
-    - Utils (`.u-` prefix)
-        - Responsive
-        - Overflow
-        - Text
-        - Hacks
-        - Typography
-        - Padding
-        - Margin
-        - Display
-        - Clearfix
+
+- Settings
+    - breakpoints
+    - colors
+    - general
+    - grid
+    - typografy
+- Mixins
+    - spacing
+    - resets
+    - flexbox helpers
+    - flexbox grid
+- Base (without prefixes)
+    - defaults (and resets)
+    - document
+    - typografy
+- Layout (`.l-`,`.o-` prefixes)
+    - grid
+    - media
+- Components (`.c-` prefix)
+- Utility classes (`.u-` prefix)
+    - display
+    - floats (+ clearfix)
+    - hacks
+    - margin
+    - overflow
+    - padding
+    - postion
+    - responsive
+    - text
 
 
 ## TODO
 
+- [ ] Aspect Ratio mixin
+- [ ] More breakpoint specific utils
+- [ ] Enable/disable short/long classes
 - [x] Spacing & Grid settings
 - [x] Grid mixin
 - [x] Media object (layout)
 - [x] Grid object (layout)
 - [x] Colors
-- [ ] Ratio box mixin
 - [x] Position utils
