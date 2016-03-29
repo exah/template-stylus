@@ -21,7 +21,7 @@ Use template:
 $ khaos create exah/template-stylus path/to/project/styles
 ```
 
-This will create `path/to/project/styles` directory inside yours project.
+This will create `path/to/project/styles` directory inside your project.
 
 
 ## Naming
