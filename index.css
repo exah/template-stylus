@@ -23,7 +23,7 @@ body {
 }
 html,
 .html {
-  font-family: -apple-system '.SFNSText-Regular' 'San Francisco' 'Roboto' 'Segoe UI' 'Helvetica Neue' 'Lucida Grande' sans-serif;
+  font-family: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
   font-size: 16px;
   line-height: 1.25;
   font-weight: normal;
@@ -87,6 +87,9 @@ h6 {
 }
 .u-hack--backface {
   backface-visibility: hidden;
+}
+.u-hack--overflow {
+  overflow: hidden;
 }
 .u-margin-none,
 .u-mg-none {
