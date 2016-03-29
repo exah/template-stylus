@@ -1,0 +1,54 @@
+flex-helpers-container($suffix = '')
+  &--top{ $suffix }
+    align-items: flex-start
+
+  &--v-center{ $suffix }
+    align-items: center
+
+  &--bottom
+    align-items: flex-end
+
+  &--baseline{ $suffix }
+    align-items: baseline
+
+  &--space-around{ $suffix }
+    justify-content: space-around
+
+  &--space-between{ $suffix }
+    justify-content: space-between
+
+  &--start{ $suffix }
+    justify-content: flex-start
+
+  &--center{ $suffix }
+    justify-content: center
+
+  &--end{ $suffix }
+    justify-content: flex-end
+
+  &--no-wrap{ $suffix }
+    flex-wrap: nowrap
+
+
+flex-helpers-item($suffix = '')
+  &--first{ $suffix }
+    order: -1
+
+  &--last{ $suffix }
+    order: 1
+
+  &--top{ $suffix }
+    align-self: flex-start
+
+  &--center{ $suffix }
+    align-self: center
+
+  &--bottom{ $suffix }
+    align-self: flex-end
+
+  &--shrink{ $suffix }
+    flex-shrink: 1
+
+  &--grow{ $suffix }
+    flex-grow: 1
+    overflow: hidden

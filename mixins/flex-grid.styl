@@ -1,0 +1,56 @@
+$grid-defaults = {
+  gap   : 1rem
+  cols  : 12
+  base  : 100%
+  suffix: ''
+}
+
+
+// Generate Flex Grid Row:
+flex-grid-generate-row($grid = $grid-defaults)
+  display: flex
+  flex-wrap: wrap
+
+  margin-left: -($grid.gap / 2)
+  margin-right: -($grid.gap / 2)
+
+  flex-helpers-container($grid.suffix)
+
+
+flex-grid-col-size($size)
+  flex: 0 0 $size
+  max-width: $size
+
+
+flex-grid-col-base($gap)
+  padding-left: ($gap / 2)
+  padding-right: ($gap / 2)
+  min-height: 1px
+
+
+// Generate Flex Grid Cell:
+flex-grid-generate-cols($grid = $grid-defaults)
+  flex-grid-col-base($grid.gap)
+  flex-helpers-item($grid.suffix)
+
+  &--shrink{ $grid.suffix }
+    flex-grid-col-base($grid.gap)
+
+  &--grow{ $grid.suffix }
+    flex-grid-col-base($grid.gap)
+
+  for $i in (1..$grid.cols)
+    $size = ($grid.base / $grid.cols * $i)
+    //$num-class = ($i is 1) ? '' : '-' + $i
+
+    &--{ $i }{ $grid.suffix }
+      flex-grid-col-base($grid.gap)
+      flex-grid-col-size($size)
+
+    if $i isnt $grid.cols
+
+      &--push-{ $i }{ $grid.suffix }
+        margin-left: $size
+
+      &--pull-{ $i }{ $grid.suffix }
+        margin-right: $size
