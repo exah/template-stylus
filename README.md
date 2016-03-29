@@ -1,10 +1,10 @@
 # Stylus template (for khaos)
 
-Some stylus staff, that I use in everyday stylus projects. Like grids, resets and utility classes.
+Some stylus staff that I use in my everyday projects. Like grids, resets and utility classes.
 
 Doesn't have any depedencies and vendor prefixes. You need manualy install stylus, and setup it in your project.
 
-I recomend use it with following PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
+I recommend to use it with following PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`.
 
 
 ## Quick start
@@ -64,7 +64,7 @@ This will create `path/to/project/styles` directory inside yours project.
 
 ## TODO
 
-- [ ] Aspect Ratio mixin
+- [ ] Aspect Ratio mixin and layout object
 - [ ] More breakpoint specific utils
 - [ ] Enable/disable short/long classes
 - [x] Spacing & Grid settings
