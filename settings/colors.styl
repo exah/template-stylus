@@ -3,8 +3,56 @@
 //
 
 $colors = {
-  red: red
-  blue: blue
-  grey: #515151
-  lightGrey: #cccccc
+  red     : red
+  tomato  : tomato
+  blue    : royalblue
+  grey    : #eee
+  darkGrey: #666
+  black   : #333
+  white   : white
 }
+
+$themes = {
+  default: {
+    primary   : $colors.black
+    secondary : $colors.grey
+    contrast  : $colors.white
+  }
+
+  brand: {
+    primary   : $colors.red
+    secondary : $colors.tomato
+    contrast  : $colors.white
+  }
+
+  inverted: {
+    primary   : $colors.black
+    secondary : $colors.darkGrey
+    contrast  : $colors.white
+  }
+}
+
+primary-color($t = 'default')
+  return $themes[$t]primary
+
+secondary-color($t = 'default')
+  return $themes[$t]secondary
+
+contrast-color($t = 'default')
+  return $themes[$t]contrast
+
+//
+// Example usage with `.btn` component:
+//
+// for $name, $theme in $themes
+//   $modifier = ($name is 'default') ? '' : '--' + $name
+//
+//   .btn{$modifier}
+//     background-color: $theme.primary
+//     color: $theme.contrast
+//     border-color: $theme.secondary
+//
+//   .btn-outline{$modifier}
+//     color: $theme.primary
+//     border-color: $theme.primary
+//
