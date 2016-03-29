@@ -28,3 +28,13 @@ Recomended usage with PostCSS plugins: `autoprefixer`, `rucksack-css`, `cssnano`
         - Margin
         - Display
         - Clearfix
+
+
+## TODO
+
+- [ ] Spacing & Grid settings
+- [ ] Grid mixin
+- [ ] Media object (layout)
+- [ ] Grid object (layout)
+- [ ] Ratio box mixin
+- [ ] Position utils
