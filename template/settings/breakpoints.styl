@@ -18,6 +18,11 @@ media-to($key = 'default')
   @media (max-width: bp($key))
     { block }
 
+media-between($from = 'default', $to = 'default')
+  +media-from($from)
+    +media-to($to)
+      { block }
+
 
 // Example usage:
 //
