@@ -1,0 +1,18 @@
+//
+// Breakpoints
+//
+
+$bp = {
+  default: 1200px
+}
+
+bp($key = 'default')
+  return $bp[$key]
+
+media-from($key = 'default')
+  @media (min-width: bp($key) + 1px)
+    { block }
+
+media-to($key = 'default')
+  @media (max-width: bp($key))
+    { block }

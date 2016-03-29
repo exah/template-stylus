@@ -1,0 +1,54 @@
+.text
+.t
+  &-style
+  &-s
+    for $style in $text-styles
+      if $style is 'default'
+        text-style($style)
+      else
+        &--{$style}
+          text-style($style)
+
+  &-align
+  &-a
+    &--right
+      text-align: right
+
+    &--left
+      text-align: right
+
+    &--center
+      text-align: center
+
+  &-cols
+    for $n in (0..10)
+      &--{ $n }
+        columns: $n
+        column-gap: $gap
+
+  &--uppercase
+    text-transform: uppercase
+
+  &--underline
+    text-decoration: underline
+
+  &--nowrap
+    white-space: nowrap
+
+  &--black
+    font-weight: 900
+
+  &--bold
+    font-weight: 700
+
+  &--medium
+    font-weight: 500
+
+  &--normal
+    font-weight: 400
+
+  &--light
+    font-weight: 300
+
+  &--thin
+    font-weight: 100

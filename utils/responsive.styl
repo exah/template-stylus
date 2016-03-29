@@ -1,0 +1,11 @@
+.show
+  for $name, $width in $bp
+    +media-from($name)
+      &{ '\@' + $name }
+        display: none
+
+.hide
+  for $name, $width in $bp
+    +media-to($name)
+      &{ '\@' + $name }
+        display: none

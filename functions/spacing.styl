@@ -1,0 +1,25 @@
+spacing($property, $list, $space = 1rem)
+  for $num in $list
+      $gap = ($space * $num)
+      $className = ($num == 1) ? '' : '-' + $num
+      $className = ($num == 0) ? '-none' : $className
+
+      &{ $className }
+        { $property }: $gap
+
+        &--top
+          { $property }-top: $gap
+        &--bottom
+          { $property }-bottom: $gap
+        &--right
+          { $property }-right: $gap
+        &--left
+          { $property }-left: $gap
+
+        &--x
+          { $property }-left: $gap
+          { $property }-right: $gap
+
+        &--y
+          { $property }-top: $gap
+          { $property }-bottom: $gap
