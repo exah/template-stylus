@@ -17,3 +17,13 @@ media-from($key = 'default')
 media-to($key = 'default')
   @media (max-width: bp($key))
     { block }
+
+
+// Example usage:
+//
+// .show
+//   for $name, $width in $bp
+//     +media-from($name)
+//       &{ '\@' + $name }
+//         display: none
+//
