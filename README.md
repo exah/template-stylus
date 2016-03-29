@@ -9,7 +9,7 @@ I recommend to use it with following PostCSS plugins: `autoprefixer`, `rucksack-
 
 ## Quick start
 
-Install khaos:
+Install [khaos](https://github.com/segmentio/khaos):
 
 ```sh
 $ npm i -g khaos
