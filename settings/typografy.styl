@@ -2,8 +2,14 @@
 // Typografy settings
 //
 
+$default-font-family = 'sans-serif'
+
+$system-sans-serif = -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif
+$system-serif = Georgia, Cambria, 'Times New Roman', Times, serif
+
 $fonts = {
-  sans-serif: (-apple-system '.SFNSText-Regular' 'San Francisco' 'Roboto' 'Segoe UI' 'Helvetica Neue' 'Lucida Grande' sans-serif)
+  sans-serif: $system-sans-serif
+  serif: $system-serif
 }
 
 $font-sizes = {
@@ -24,8 +30,11 @@ $font-weights = {
 
 $text-styles = keys( merge( {}, $font-sizes, $line-heights, $font-weights ) )
 
+-font-family($type = $default-font-family)
+  return unquote($fonts[$type])
+
 text-style($style = 'default', $type = false)
-  font-family: $fonts[$type]          if $type
-  font-size: $font-sizes[$style]      if $style in $font-sizes
-  line-height: $line-heights[$style]  if $style in $line-heights
-  font-weight: $font-weights[$style]  if $style in $font-weights
+  font-family: $fonts[$type]         if $type
+  font-size: $font-sizes[$style]     if $style in $font-sizes
+  line-height: $line-heights[$style] if $style in $line-heights
+  font-weight: $font-weights[$style] if $style in $font-weights
