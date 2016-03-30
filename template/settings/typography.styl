@@ -13,28 +13,35 @@ $fonts = {
 }
 
 $font-sizes = {
-  default : 16px
+  root    : 16px
+  default : 1rem
   smaller : .9rem
   bigger  : 1.2rem
 }
 
 $line-heights = {
+  root    : 1.25
   default : 1.25
   smaller : 1.25
   bigger  : 1.25
 }
 
 $font-weights = {
-  default: normal
+  root    : normal
+  default : normal
 }
 
 $text-styles = keys( merge( {}, $font-sizes, $line-heights, $font-weights ) )
 
--font-family($type = $default-font-family)
-  return unquote($fonts[$type])
+-get-text-style($style = 'default')
+  return {
+    font-size   : $font-sizes[$style]
+    line-height : $line-heights[$style]
+    font-weight : $font-weights[$style]
+  }
 
 text-style($style = 'default', $type = false)
-  font-family: $fonts[$type]         if $type
-  font-size: $font-sizes[$style]     if $style in $font-sizes
-  line-height: $line-heights[$style] if $style in $line-heights
-  font-weight: $font-weights[$style] if $style in $font-weights
+  font-family: $fonts[$type] if $type
+
+  for $property, $value in -get-text-style($style)
+    {$property}: $value if $value
