@@ -1,0 +1,25 @@
+ratio-box-container()
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+
+  &__content
+    position: absolute
+    top: 0
+
+    width: 100%
+    height: 100%
+
+-ratio-box-calc($w, $h, $gap = 0)
+  if $gap isnt 0
+    return 'calc((100% * %s / %s) - %s * %s / %s ))' % ($h $w $gap $h $w)
+  else
+    return (100% * $h / $w)
+
+ratio-box-item($w, $h, $gap = 0)
+  &::before
+    padding-bottom: -ratio-box-calc($w, $h, $gap)
