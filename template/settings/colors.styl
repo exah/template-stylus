@@ -14,29 +14,33 @@ $colors = {
 
 $themes = {
   default: {
-    primary   : $colors.black
-    secondary : $colors.grey
-    contrast  : $colors.white
+    primary : $colors.black
+    accent  : $colors.red
+    subtle  : $colors.grey
+    contrast: $colors.white
   }
 
   brand: {
-    primary   : $colors.red
-    secondary : $colors.tomato
-    contrast  : $colors.white
+    primary : $colors.red
+    contrast: $colors.white
   }
 
   inverted: {
-    primary   : $colors.black
-    secondary : $colors.darkGrey
-    contrast  : $colors.white
+    primary : $colors.black
+    accent  : $colors.red
+    subtle  : $colors.darkGrey
+    contrast: $colors.white
   }
 }
 
 primary-color($t = 'default')
   return $themes[$t]primary
 
-secondary-color($t = 'default')
-  return $themes[$t]secondary
+accent-color($t = 'default')
+  return $themes[$t]accent
+
+subtle-color($t = 'default')
+  return $themes[$t]subtle
 
 contrast-color($t = 'default')
   return $themes[$t]contrast
@@ -50,7 +54,7 @@ contrast-color($t = 'default')
 //   .btn{$modifier}
 //     background-color: $theme.primary
 //     color: $theme.contrast
-//     border-color: $theme.secondary
+//     border-color: $theme.accent
 //
 //   .btn-outline{$modifier}
 //     color: $theme.primary

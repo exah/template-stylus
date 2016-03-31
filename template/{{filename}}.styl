@@ -1,48 +1,38 @@
-// {{project}}
-// @author {{author}}
+/**
+ * {{projectname}} -- {{author}}
+ * Based on: https://github.com/exah/template-stylus
+ */
+
 //
-// 1. Third-party dependencies
-// 2. Settings
-// 3. Mixins
-// 4. Base
-// 5. Layout
-// 6. Components
-// 7. Utils
+// CONTENTS
+//
+// Depedencies........Third-party staff like Normalize or Bootstrap
+// Global.............Setting and Mixins
+// Base...............Typography and default styles
+// Layout.............Layout classes like grids, media object, etc.
+// Components.........Components styles like tabs, tables, articles, etc.
+// Utils..............Helper classes for margins, paddings, hacks, etc.
 //
 
 //
-// 1. Third-party dependencies
+// Depedencies
 //
 
 // @import '~normalize.css/normalize.css'
 
 
 //
-// 2. Settings
+// Global
+//
+// Doesn't produce any markup.
+// Can be imported in other styles / components directly
 //
 
-@import 'settings/general'
-@import 'settings/breakpoints'
-@import 'settings/typography'
-@import 'settings/colors'
-@import 'settings/grid'
-
-
-//
-// 3. Mixins
-//
-
-@import 'mixins/spacing'
-@import 'mixins/reset-input'
-@import 'mixins/flex-helpers'
-@import 'mixins/flex-grid'
+@import '{{globalfilename}}'
 
 
 //
-// 4. Base styles
-//
-//    document, defaults, typography, etc.
-//    Often without Prefixes / classes
+// Base
 //
 
 @import 'base/defaults'
@@ -51,18 +41,19 @@
 
 
 //
-// 5. Layout
-//    @prefix .l-[class]
+// Layout
+// @prefix .l-[class]
 //
 
 +prefix-classes('l-')
   @import 'layout/grid'
   @import 'layout/media'
+  @import 'layout/rect'
 
 
 //
-// 6. Components (btn, nav, header, modal)
-//    @prefix .c-[name]
+// Components (btn, nav, header, modal)
+// @prefix .c-[name]
 //
 
 // +prefix-classes('c-')
@@ -70,11 +61,8 @@
 
 
 //
-// 7. Utils
-//    @prefix .u-[class]
-//
-//    Helper classes
-//    Like spacing (margin, padding), common hacks, responsive, text-styles
+// Utils
+// @prefix .u-[class]
 //
 
 +prefix-classes('u-')

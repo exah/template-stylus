@@ -64,9 +64,10 @@ This will create `path/to/project/styles` directory inside your project.
 
 ## TODO
 
-- [ ] Aspect Ratio mixin and layout object
+- [ ] Add themes
 - [ ] More breakpoint specific utils
 - [ ] Enable/disable short/long classes
+- [x] Aspect Ratio mixin and layout object
 - [x] Spacing & Grid settings
 - [x] Grid mixin
 - [x] Media object (layout)
