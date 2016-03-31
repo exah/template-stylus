@@ -31,6 +31,7 @@ This will create `path/to/project/styles` directory inside your project.
 
 ## Structure
 
+- Dependencies
 - Settings
     - breakpoints
     - colors
