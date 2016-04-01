@@ -9,13 +9,19 @@
         &--{$style}
           text-style($style)
 
+  &-color
+  &-c
+    for $name, $color in $colors
+      &--{$name}
+        color: $color
+
   &-align
   &-a
     &--right
       text-align: right
 
     &--left
-      text-align: right
+      text-align: left
 
     &--center
       text-align: center
