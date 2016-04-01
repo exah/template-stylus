@@ -9,6 +9,12 @@
         &--{$style}
           text-style($style)
 
+  &-color
+  &-c
+    for $name, $color in $colors
+      &--{$name}
+        color: $color
+
   &-align
   &-a
     &--right
